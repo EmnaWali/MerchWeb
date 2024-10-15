@@ -1,0 +1,229 @@
+/* Mise en page principale */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Assure que la mise en page couvre toute la hauteur de la fenêtre */
+  margin: 0; /* Supprime les marges par défaut qui peuvent créer des espaces indésirables */
+}
+
+.custom-navbar {
+  background-color: #d6eaf8; /* Couleur uniforme pour la navbar */
+  border-bottom: 1px solid #dee2e6;
+  color: #d9dbe3; /* Couleur du texte de la navbar */
+  display: flex;
+  justify-content: space-between; /* Aligne les éléments de la navbar */
+  align-items: center;
+  width: 100%; /* Assure que la navbar occupe toute la largeur */
+  position: fixed; /* Fixe la navbar en haut */
+  top: 0;
+  left: 0; /* Assure que la navbar est alignée à gauche */
+ 
+}
+
+.custom-navbar .navbar-brand img {
+  height: 60px; /* Ajuster la taille du logo */
+  width: 90px;
+ 
+  margin-left: 30px;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  color: #232f5f; /* Couleur du texte des liens de la navbar */
+  margin-right: 20px; /* Espacement entre les éléments de la navbar */
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #007bff; /* Couleur du texte au survol */
+}
+
+.custom-navbar .btn-link {
+  color: #232f5f; /* Couleur du texte du bouton de déconnexion */
+}
+
+.custom-navbar .btn-link:hover {
+  color: #007bff; /* Couleur du texte au survol */
+  text-decoration: none; /* Supprime le soulignement du texte au survol */
+}
+
+.content {
+  padding: 20px;
+  width: 100%;
+  height: 100%; /* Ajuste la largeur du contenu pour utiliser toute la largeur disponible */
+  background-color: #fff; /* Couleur de fond du contenu */
+  z-index: 1; /* Assure que le contenu est sous la navbar */
+  position: relative; /* Position relative pour éviter tout chevauchement non désiré */
+  margin-top: 70px; /* Ajoute un espace pour la navbar */
+}
+
+/* Styles de la page */
+body {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 991.98px) {
+  .content {
+    width: 100%; /* Ajuste la largeur du contenu */
+    margin-top: 65px; /* Ajoute un espace pour la navbar */
+  }
+}
+/* Styles généraux pour le conteneur */
+.mission-list-container {
+  padding: 20px;
+}
+
+/* Style pour le bouton 'Ajouter une mission' */
+.add-mission-button {
+  float: right;
+  margin-bottom: 15px;
+}
+
+/* Styles pour le tableau */
+.mission-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+
+.mission-table th {
+  background-color: #f2f2f2;
+}
+
+.mission-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Style pour le conteneur des boutons d'action */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Styles pour les icônes des boutons */
+.action-buttons .btn-info i,
+.action-buttons .btn-danger i {
+  color: white;
+}
+
+/* Centrer le contenu du tableau */
+.custom-table{
+  padding: 12px;
+  text-align: center; /* Centrer le texte */
+  border: 1px solid #ddd;
+}
+
+/* styles.css */
+.custom-modal .modal-content {
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.custom-modal .modal-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.custom-modal .modal-footer {
+  border-top: none;
+}
+
+.custom-modal .form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.custom-modal .form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.custom-modal .form-group {
+  margin-bottom: 5px;
+}
+
+.custom-modal .modal-body {
+  padding: 5px;
+}
+
+.custom-modal .btn-danger {
+  background-color: #f44336;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 5px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-modal .btn-danger:hover {
+  background-color: #e53935;
+}
+
+
+
+.custom-modal .btn-secondary:hover {
+  background-color: #757575;
+}
+
+/* Ajoutez des marges aux boutons */
+.custom-modal .modal-footer .btn {
+  margin-left: 10px;
+}
+
+/* Table Styles */
+.custom-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.custom-table thead th {
+  background-color: #f2f2f2;
+  border: none;
+  padding: 15px;
+}
+
+.custom-table tbody tr {
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.btn.btn-link i {
+  margin-left: 5px; /* Espace entre le texte et l'icône */
+  font-size: 18px; /* Taille de l'icône */
+}
+@media print {
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+  }
+  
+  .no-print {
+    display: none; /* Masquer les éléments non pertinents pour l'impression */
+  }
+ 
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #d1d0d0;
+  }
+
+  .custom-table th, .custom-table td {
+    border: 1px solid #d1d0d0;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .table-header {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #d1d0d0;
+  }
+}
+.custom-heading {
+  font-size: 0.80rem; /* Adjust this value to match the desired size */
+  font-weight: normal; /* Adjust weight as needed */
+  margin: 0; /* Adjust margin as needed */
+}
+
